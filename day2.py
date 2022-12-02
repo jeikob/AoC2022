@@ -5,27 +5,27 @@ for (them, me) in strats:
     match me:
         case 'X': # +1 rock
             match them:
-                case 'A': # +3 tie
+                case 'A': # +3 rock tie
                     totalScore += 4 # 1+3 rock+tie
-                case 'B': # +0 loss
+                case 'B': # +0 paper loss
                     totalScore += 1 # 1+0 rock+loss
-                case 'C': # +6 win
+                case 'C': # +6 scissors win
                     totalScore += 7 # 1+6 rock+win
         case 'Y': # +2 paper
             match them:
-                case 'A': # +6 win
+                case 'A': # +6 rock win
                     totalScore += 8 # 2+6 paper+win
-                case 'B': # +3 tie
+                case 'B': # +3 paper tie
                     totalScore += 5 # 2+3 paper+tie
-                case 'C': # +0 loss
+                case 'C': # +0 scissors loss
                     totalScore += 2 # 2+0 paper+loss
         case 'Z': # +3 scissors
             match them:
-                case 'A': # +0 loss
+                case 'A': # +0 rock loss
                     totalScore += 3 # 3+0 scissors+loss
-                case 'B': # +6 win
+                case 'B': # +6 paper win
                     totalScore += 9 # 3+6 scissors+win
-                case 'C': # +3 tie
+                case 'C': # +3 scissors tie
                     totalScore += 6 # 3+3 scissors+tie
 print(totalScore)
 

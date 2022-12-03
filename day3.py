@@ -9,7 +9,7 @@ def priority(item):
         return ord(item)-96
     elif uppercase:
         return ord(item)-38
-#function to find common item between rucksack compartments
+# function to find common item between rucksack compartments
 def mutualItem(sack1, sack2):
     for item in sack1:
         if item in sack2:
@@ -28,7 +28,7 @@ print(totalPriority)
 # read in each elf from the file
 elves = open("day3.txt").readlines()
 # split out the elves into their respective groups; the [:-1] is just to remove the '\n' from each string 
-groups = [[elves[i][:-1], elves[i+1][:-1], elves[i+2][:-1]] for i in range(0, len(elves), 3)]
+groups = [(elves[i][:-1], elves[i+1][:-1], elves[i+2][:-1]) for i in range(0, len(elves), 3)]
 # function to identify the badge of each group
 def groupBadge(elf1, elf2, elf3):
     for badge in elf1:
